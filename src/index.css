@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd){font-weight: bolder;}
+  @layer components {
+    .radio{
+        @apply appearance-none w-4 h-4 border border-gray-300 rounded-full bg-white checked:bg-green-500 checked:border-gray-300 transition duration-200;
+    }
+    .producttopbuttons{
+        @apply hidden md:block col-span-1 w-full border-2 p-4 m-4 rounded-md;
+    }
+    .productheaders{
+     @apply text-2xl font-bold p-6 border-b-2 border-gray-200; 
+    }
+    .catheader{
+      @apply font-bold p-6 border-b-2 border-gray-200;
+    }
+  }
